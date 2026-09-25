@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Despachante São Paulo · atendimento digital em todo o estado de SP</title>
+<meta name="description" content="Transferência, licenciamento, IPVA, multas e 2ª via de carro e moto. Base em Franca, atendimento digital para veículos de todo o estado de São Paulo. Manda a placa no WhatsApp.">
+<meta property="og:title" content="Despachante São Paulo">
+<meta property="og:description" content="A burocracia chega em pedaços. A gente devolve inteiro. Atendimento digital em todo o estado de SP.">
+<meta property="og:image" content="assets/logo.webp">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="assets/fusca.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/logo.webp">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Despachante São Paulo",
+ "description":"Despachante de documentação veicular. Base em Franca/SP, atendimento digital para veículos registrados no estado de São Paulo.",
+ "address":{"@type":"PostalAddress","streetAddress":"Av. Miguel Sábio de Mello, 60 - Jardim Santana","addressLocality":"Franca","addressRegion":"SP","postalCode":"14403-068","addressCountry":"BR"},
+ "areaServed":{"@type":"State","name":"São Paulo"},
+ "telephone":"+55-16-3721-1178","sameAs":["https://www.instagram.com/despachantesaopaulo016/"]}
+</script>
+</head>
+<body>
+<a class="skip" href="#agora">Pular para o atendimento</a>
+
+<!-- BARRA DE SISTEMA: anel de progresso = assinatura "o anel se fecha" -->
+<header class="bar" id="bar">
+  <a class="badge" href="#entrada" aria-label="Início">
+    <svg viewBox="0 0 44 44" aria-hidden="true"><circle class="badge-track" cx="22" cy="22" r="19"/><circle class="badge-ring" id="ring" cx="22" cy="22" r="19"/></svg>
+    <img src="assets/fusca.webp" alt="" width="22" height="23">
+  </a>
+  <div class="bar-id">
+    <b>Despachante São Paulo</b>
+    <span class="mono bar-status"><i class="dot"></i><span id="status">atendimento digital · SP</span></span>
+  </div>
+  <a class="bar-cta mono" data-wa href="#">WhatsApp</a>
+</header>
+
+<main>
+<!-- 00 · ENTRADA — fragmentos condensam na marca real -->
+<section class="hero" id="entrada" data-status="atendimento digital · SP">
+  <canvas id="field" aria-hidden="true"></canvas>
+  <div class="tags" id="tags" aria-hidden="true"></div>
+  <p class="hero-sys mono" id="heroSys" aria-hidden="true"><i class="dot"></i><span>recebendo pendências</span></p>
+  <div class="hero-copy">
+    <p class="k mono">Despachante · base em Franca · atendimento digital em todo o estado de SP</p>
+    <h1 class="split">
+      <span class="ln"><span>A burocracia chega</span></span>
+      <span class="ln"><span>em pedaços.</span></span>
+      <span class="ln r"><span>A gente devolve</span></span>
+      <span class="ln r"><span>inteiro.</span></span>
+    </h1>
+    <p class="lead">Transferência, licenciamento, IPVA, multas e 2ª via de carro e moto. Você manda a placa pelo WhatsApp, de onde estiver. A gente confere, resolve e explica cada passo.</p>
+    <div class="ctas">
+      <a class="btn btn-go" data-wa href="#"><span>Resolver pelo WhatsApp</span><i class="arrow" aria-hidden="true"></i></a>
+      <a class="btn btn-ghost" href="#travando">O que está travando?</a>
+    </div>
+  </div>
+  <p class="hint mono" aria-hidden="true">passe o dedo na marca</p>
+</section>
+
+<!-- 01 · DIAGNÓSTICO — escolha reorganiza a interface -->
+<section class="sec" id="travando" data-status="diagnóstico">
+  <div class="wrap">
+    <header class="sec-h">
+      <p class="k mono">01 · diagnóstico</p>
+      <h2>O que está <em>travando?</em></h2>
+      <p class="sec-sub">Escolhe o que mais parece com o seu caso. A tela organiza o resto.</p>
+    </header>
+    <div class="diag">
+      <div class="chips" id="chips" role="radiogroup" aria-label="Seu caso"></div>
+      <div class="panel" id="panel" aria-live="polite">
+        <div class="panel-empty mono" id="panelEmpty">
+          <span class="frag-demo" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          escolha um caso ao lado
+        </div>
+        <div class="panel-body" id="panelBody" hidden>
+          <p class="mono panel-k">o que pode estar travando</p>
+          <div class="frags" id="frags"></div>
+          <p class="mono panel-k">o caminho</p>
+          <ol class="path" id="path"></ol>
+          <a class="btn btn-go" id="diagCta" data-wa href="#"><span>Resolver isso</span><i class="arrow" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 · PROCESSO — caos à frente do carro, ordem atrás; no fim a marca se monta -->
+<section class="proc" id="processo" data-status="em processo">
+  <div class="proc-sticky">
+    <div class="wrap">
+      <header class="sec-h">
+        <p class="k mono">02 · processo</p>
+        <h2 id="procTitle">Do pedaço <em>ao inteiro.</em></h2>
+      </header>
+    </div>
+    <div class="road" id="road" aria-hidden="true">
+      <div class="road-line"></div>
+      <div class="road-frags" id="roadFrags"></div>
+      <div class="stations"><i></i><i></i><i></i><i></i></div>
+      <img class="road-car" id="roadCar" src="assets/fusca.webp" alt="" width="54" height="57">
+    </div>
+    <div class="wrap">
+      <ol class="stages" id="stages">
+        <li><span class="mono">01</span><h3>Você manda</h3><p>A placa e a foto dos documentos, pelo WhatsApp. De onde estiver.</p></li>
+        <li><span class="mono">02</span><h3>A gente confere</h3><p>Débitos, restrições, gravame e prazos. Tudo que pode travar.</p></li>
+        <li><span class="mono">03</span><h3>A gente resolve</h3><p>Com o Detran-SP, explicando cada passo. Se precisar de vistoria ou assinatura, você sabe antes.</p></li>
+        <li><span class="mono">04</span><h3>Resolvido</h3><p>Documento em dia. Quando ele é digital, chega direto no seu celular.</p></li>
+      </ol>
+    </div>
+    <div class="assemble" id="assemble" aria-hidden="true">
+      <div class="mark">
+        <svg class="mark-ring" viewBox="0 0 400 400"><circle cx="200" cy="200" r="190"/></svg>
+        <img class="m-s" src="assets/S.webp" alt="" width="145" height="164">
+        <img class="m-car" src="assets/fusca.webp" alt="" width="170" height="178">
+        <img class="m-p" src="assets/P.webp" alt="" width="140" height="163">
+      </div>
+      <p class="mark-t">Resolvido.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · MAPA — rede do estado reage ao toque -->
+<section class="sec dark" id="mapa" data-status="rede SP">
+  <div class="wrap">
+    <header class="sec-h">
+      <p class="k mono">03 · onde você está</p>
+      <h2>De onde você <em>estiver.</em></h2>
+      <p class="sec-sub">Base em Franca. Atendimento digital para veículos registrados em todo o estado de São Paulo.</p>
+    </header>
+    <div class="map-box">
+      <svg class="map" id="map" role="img" aria-label="Mapa do estado de São Paulo. Toque na sua região."></svg>
+      <div class="readout" id="readout" aria-live="polite">
+        <p class="mono ro-k">toque na sua região</p>
+        <p class="ro-main" id="roMain">A rede é o estado inteiro.</p>
+        <p class="ro-sub" id="roSub">Franca é a base. O resto vem pelo WhatsApp.</p>
+      </div>
+    </div>
+    <label class="city-pick mono">ou escolha a cidade mais próxima
+      <select id="citySel"><option value="">—</option></select>
+    </label>
+    <p class="fine">Se o serviço exigir vistoria do veículo ou documento original, a gente explica antes onde e como fazer perto de você.</p>
+  </div>
+</section>
+
+<!-- 04 · PERGUNTAS -->
+<section class="sec" id="duvidas" data-status="perguntas">
+  <div class="wrap">
+    <header class="sec-h">
+      <p class="k mono">04 · perguntas</p>
+      <h2>Pergunta <em>rápida.</em></h2>
+    </header>
+    <div class="qa" id="qa"></div>
+  </div>
+</section>
+
+<!-- 05 · AGORA — a mensagem é montada pela navegação e condensa no envio -->
+<section class="sec final" id="agora" data-status="pronto pra enviar">
+  <div class="wrap">
+    <header class="sec-h">
+      <p class="k mono">05 · agora</p>
+      <h2>Resolver <em>agora.</em></h2>
+      <p class="sec-sub">Tudo que você escolheu na página já está na mensagem. Confere e manda.</p>
+    </header>
+    <form class="composer" id="composer" novalidate>
+      <div class="c-row">
+        <span class="mono c-l">assunto</span>
+        <div class="chips small" id="chips2" role="radiogroup" aria-label="Assunto"></div>
+      </div>
+      <div class="c-row">
+        <label class="mono c-l" for="plate">placa</label>
+        <div class="plate" id="plateBox">
+          <div class="plate-band"><span>BRASIL</span><i></i></div>
+          <input id="plate" maxlength="8" placeholder="ABC1D23" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="text" aria-describedby="plateMsg">
+        </div>
+        <span class="mono plate-msg" id="plateMsg">opcional — ajuda a conferir mais rápido</span>
+      </div>
+      <div class="c-row">
+        <span class="mono c-l">região</span>
+        <p class="c-city" id="cCity"><a href="#mapa">escolher no mapa</a></p>
+      </div>
+      <div class="bubble" id="bubble">
+        <p class="mono b-to">para (16) 99985-6385</p>
+        <p class="b-msg" id="bMsg"></p>
+      </div>
+      <button class="btn btn-go btn-send" id="send" type="submit"><span>Enviar no WhatsApp</span><i class="arrow" aria-hidden="true"></i></button>
+      <p class="mono c-note">Nada fica salvo neste site. A mensagem abre no seu WhatsApp.</p>
+    </form>
+    <div class="launch" id="launch" aria-hidden="true">
+      <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54"/></svg>
+      <img src="assets/fusca.webp" alt="" width="64" height="67">
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <img src="assets/logo.webp" alt="Logo Despachante São Paulo" width="112" height="112" loading="lazy">
+    <div>
+      <p><b>Despachante São Paulo</b><br>Av. Miguel Sábio de Mello, 60 — Jardim Santana, Franca/SP</p>
+      <p class="mono">
+        <a data-wa href="#">WhatsApp (16) 99985-6385</a> ·
+        <a href="tel:+551637211178">(16) 3721-1178</a> ·
+        <a href="https://maps.google.com/?cid=12072547940781738967" target="_blank" rel="noopener">mapa</a> ·
+        <a href="https://www.instagram.com/despachantesaopaulo016/" target="_blank" rel="noopener">instagram</a>
+      </p>
+      <p class="mono foot-src">Prazos, taxas e regras citados: Detran-SP · Agência SP · Código de Trânsito Brasileiro. 2026.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="dock" id="dock" data-wa href="#"><span class="dock-t">Resolver pelo WhatsApp</span><span class="dock-ctx mono" id="dockCtx"></span><i class="arrow" aria-hidden="true"></i></a>
+
+<script src="assets/sp-map.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
