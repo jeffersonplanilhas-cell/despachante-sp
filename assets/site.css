@@ -61,7 +61,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* ---------- 00 hero ---------- */
 .hero{position:relative;min-height:100svh;padding:calc(var(--bar-h) + 18px + var(--logo-h,78vw) + 44px) 0 64px;overflow:hidden}
 @media(min-width:900px){.hero{padding:0;display:flex;align-items:center}}
-#field{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
+#field{position:absolute;left:0;top:0;touch-action:pan-y}
 .tags{position:absolute;inset:0;pointer-events:none}
 .tag{position:absolute;left:0;top:0;font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.06em;padding:4px 8px;border:1px solid var(--line-strong);border-radius:4px;background:#fff;color:var(--graphite);white-space:nowrap;
   transition:transform var(--t-scene) var(--e-condense),opacity var(--t-scene) var(--e-condense)}

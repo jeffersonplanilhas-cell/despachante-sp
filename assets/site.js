@@ -116,6 +116,7 @@
   function layout() {
     W = hero.clientWidth; H = hero.clientHeight; dpr = Math.min(devicePixelRatio || 1, 2);
     field.width = Math.round(W * dpr); field.height = Math.round(H * dpr);
+    field.style.width = `${W}px`; field.style.height = `${H}px`;
     const desk = innerWidth >= 900;
     L = Math.round(desk ? Math.min(W * 0.36, H * 0.7, 540) : Math.min(W * 0.78, 380));
     lc = desk ? { x: W * 0.74, y: H * 0.52 } : { x: W / 2, y: 64 + 18 + L / 2 };
@@ -367,6 +368,10 @@
   addEventListener('scroll', onScroll, { passive: true });
   let rz;
   addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { layout(); if (logoImg.complete) { sample(); kick(); } buildRoad(); onScroll(); }, 160); });
+
+  // altura do hero muda quando as fontes carregam: canvas nunca pode esticar
+  let lastH = 0;
+  new ResizeObserver(() => { const h = hero.clientHeight; if (Math.abs(h - lastH) < 2) return; lastH = h; const oldL = L; layout(); if (parts.length && L !== oldL) sample(); kick(); }).observe(hero);
 
   buildMap(); buildRoad(); sync(); onScroll();
 })();
