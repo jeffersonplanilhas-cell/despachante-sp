@@ -1,10 +1,10 @@
 /* Despachante São Paulo — design system V2 "Condensação"
    Tokens documentados em 02_BRAND/DESIGN-SYSTEM.md */
 :root{
-  --ink:#111112; --graphite:#383838; --red:#E81820; --red-deep:#B5121A;
-  --white:#FFFFFF; --fog:#F3F2EF; --line:rgba(17,17,18,.12); --line-strong:rgba(17,17,18,.28);
+  --ink:#17171A; --graphite:#383838; --red:#E3241B; --red-deep:#B81A13; --faixa:#FFC62B;
+  --white:#F3EFE4; --fog:#EAE4D6; --line:rgba(17,17,18,.12); --line-strong:rgba(17,17,18,.28);
   --muted:#6E6B66; --zap:#25D366; --mercosul:#1D3A8F;
-  --f-display:'Archivo',system-ui,sans-serif; --f-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --f-display:'Barlow',system-ui,sans-serif; --f-cond:'Barlow Condensed','Barlow',sans-serif; --f-serif:'Instrument Serif',Georgia,serif; --f-mono:'Barlow',system-ui,sans-serif;
   /* motion: entrada fragmentada · organização condensa · ação acelera · conclusão estabiliza */
   --e-condense:cubic-bezier(.16,1,.3,1); --e-launch:cubic-bezier(.7,0,.84,0); --e-settle:cubic-bezier(.22,1,.36,1);
   --t-micro:160ms; --t-move:480ms; --t-scene:900ms;
@@ -28,7 +28,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* ---------- barra de sistema ---------- */
 .bar{position:fixed;inset:0 0 auto 0;height:var(--bar-h);z-index:30;display:flex;align-items:center;gap:12px;padding:0 16px;
-  background:rgba(255,255,255,.86);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid transparent;transition:border-color var(--t-move)}
+  background:rgba(243,239,228,.9);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid transparent;transition:border-color var(--t-move)}
 .bar.scrolled{border-color:var(--line)}
 .badge{position:relative;width:44px;height:44px;flex:none;display:grid;place-items:center;border-radius:50%;background:#fff}
 .badge svg{position:absolute;inset:0;transform:rotate(-90deg)}
@@ -38,7 +38,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .badge img{width:22px;height:auto;opacity:0;transform:scale(.6);transition:opacity var(--t-move) var(--e-condense),transform var(--t-move) var(--e-condense)}
 .bar.docked .badge img{opacity:1;transform:none}
 .bar-id{display:flex;flex-direction:column;line-height:1.15;min-width:0}
-.bar-id b{font-stretch:80%;font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap}
+.bar-id b{font-family:var(--f-cond);font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap}
 .bar-status{font-size:11px;color:var(--muted);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bar-status .dot{width:6px;height:6px;margin-right:6px;animation:blink 2.4s steps(2) infinite}
 .bar-cta{margin-left:auto;font-size:13px;font-weight:600;text-transform:uppercase;text-decoration:none;padding:10px 14px;border:1.5px solid var(--ink);border-radius:var(--r-pill);white-space:nowrap;transition:background var(--t-micro),color var(--t-micro)}
@@ -72,7 +72,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hero-copy a{pointer-events:auto}
 @media(min-width:900px){.hero-copy{padding:0 0 0 max(40px,calc((100vw - 1180px)/2 + 40px));max-width:calc(min(560px,46vw) + max(40px,calc((100vw - 1180px)/2 + 40px)))}}
 .k{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--red);margin-bottom:18px}
-h1{font-stretch:66%;font-weight:900;text-transform:uppercase;font-size:clamp(46px,12.6vw,104px);line-height:.88;letter-spacing:-.005em}
+h1{font-family:var(--f-cond);font-weight:800;text-transform:uppercase;font-size:clamp(46px,12.6vw,104px);line-height:.88;letter-spacing:-.005em}
 @media(min-width:900px){h1{font-size:clamp(64px,6.6vw,104px)}}
 .split .ln{display:block;overflow:hidden;padding-bottom:.04em}
 .split .ln>span{display:block;transform:translateY(105%);transition:transform var(--t-scene) var(--e-condense)}
@@ -94,7 +94,7 @@ h1{font-stretch:66%;font-weight:900;text-transform:uppercase;font-size:clamp(46p
 .sec{padding:var(--s9) 0}
 @media(max-width:767px){.sec{padding:84px 0}}
 .sec-h{max-width:720px;margin-bottom:var(--s7)}
-h2{font-stretch:68%;font-weight:900;text-transform:uppercase;font-size:clamp(42px,10vw,84px);line-height:.9}
+h2{font-family:var(--f-cond);font-weight:800;text-transform:uppercase;font-size:clamp(42px,10vw,84px);line-height:.9}
 h2 em,.mark-t em{font-style:normal;color:var(--red)}
 .sec-sub{font-size:18px;margin-top:16px;color:#333;max-width:560px}
 
@@ -153,7 +153,7 @@ h2 em,.mark-t em{font-style:normal;color:var(--red)}
 .stages{list-style:none;display:grid;gap:12px;position:relative;min-height:140px}
 .stages li{padding:18px;border-radius:var(--r-card);background:#fff;border:1px solid var(--line);transition:opacity var(--t-move),transform var(--t-move) var(--e-condense),border-color var(--t-move)}
 .stages li span{font-size:12px;color:var(--red);font-weight:600}
-.stages h3{font-stretch:78%;font-weight:850;text-transform:uppercase;font-size:26px;line-height:1;margin:6px 0 8px}
+.stages h3{font-family:var(--f-cond);font-weight:800;text-transform:uppercase;font-size:26px;line-height:1;margin:6px 0 8px}
 .stages p{font-size:15px;color:#333}
 @media(max-width:899px){.stages li{position:absolute;inset:0 0 auto 0;opacity:0;transform:translateY(16px);transition:opacity 140ms,transform var(--t-move) var(--e-condense)}.stages li.on{opacity:1;transform:none;transition-delay:150ms}}
 @media(min-width:900px){.stages{grid-template-columns:repeat(4,1fr)}.stages li{opacity:.35}.stages li.on{opacity:1;border-color:var(--ink);transform:translateY(-6px)}.stages li.past{opacity:.7}}
@@ -163,7 +163,7 @@ h2 em,.mark-t em{font-style:normal;color:var(--red)}
 .mark-ring circle{fill:#fff;stroke:var(--red);stroke-width:12;stroke-dasharray:1194;stroke-dashoffset:1194;transition:stroke-dashoffset 1100ms var(--e-condense) .25s}
 .mark img{position:relative;height:auto;transition:transform var(--t-scene) var(--e-condense),opacity var(--t-move)}
 .m-s{width:26%;transform:translateX(-70vw)}.m-p{width:25%;transform:translateX(70vw)}.m-car{width:30%;margin:0 1%;transform:translateY(40px) scale(.7)}
-.mark-t{font-stretch:68%;font-weight:900;text-transform:uppercase;font-size:clamp(40px,9vw,72px);line-height:.9;opacity:0;transform:translateY(12px);transition:opacity var(--t-move) .5s,transform var(--t-move) var(--e-condense) .5s}
+.mark-t{font-family:var(--f-cond);font-weight:800;text-transform:uppercase;font-size:clamp(40px,9vw,72px);line-height:.9;opacity:0;transform:translateY(12px);transition:opacity var(--t-move) .5s,transform var(--t-move) var(--e-condense) .5s}
 .proc.assembled .assemble{opacity:1}
 .proc.assembled .mark-ring circle{stroke-dashoffset:0}
 .proc.assembled .mark img{transform:none}
@@ -189,7 +189,7 @@ h2 em,.mark-t em{font-style:normal;color:var(--red)}
 .map text{font-family:var(--f-mono);font-size:18px;fill:#d7d3cc;letter-spacing:.04em}
 .readout{border-top:1px solid rgba(255,255,255,.2);padding-top:16px;min-height:150px}
 .ro-k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#9a968f}
-.ro-main{font-stretch:72%;font-weight:850;text-transform:uppercase;font-size:clamp(28px,6vw,40px);line-height:.95;margin:10px 0 8px}
+.ro-main{font-family:var(--f-cond);font-weight:800;text-transform:uppercase;font-size:clamp(28px,6vw,40px);line-height:.95;margin:10px 0 8px}
 .ro-main em{font-style:normal;color:#ff5a55}
 .ro-sub{color:#cfcbc4;font-size:16px}
 .city-pick{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:24px;font-size:12px;text-transform:uppercase;color:#9a968f}
@@ -270,3 +270,13 @@ h2 em,.mark-t em{font-style:normal;color:var(--red)}
   .proc.assembled .road,.proc.assembled .stages,.proc.assembled .sec-h{opacity:1}
 }
 @media(max-width:767px){.chips.small{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:2px 22px;scroll-snap-type:x proximity}.chips.small::-webkit-scrollbar{display:none}.chips.small .chip{flex:none;scroll-snap-align:start}}
+
+/* V3 "De S a P": voz humana em serifa + faixa da estrada como divisor */
+.lead,.sec-sub{font-family:var(--f-serif);font-style:italic;font-size:22px;line-height:1.35}
+@media(min-width:768px){.lead,.sec-sub{font-size:25px}}
+.q button{font-family:var(--f-cond);font-weight:700}
+.sec{position:relative}
+.sec::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:repeating-linear-gradient(90deg,var(--faixa) 0 34px,transparent 34px 58px);opacity:.9}
+#entrada + .sec::before{display:none}
+.dark .readout .ro-main em,.dark .k{color:var(--faixa)}
+.road-line{background:repeating-linear-gradient(90deg,var(--faixa) 0 26px,transparent 26px 44px);height:5px}
